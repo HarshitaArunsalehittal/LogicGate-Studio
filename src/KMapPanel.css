@@ -1,0 +1,98 @@
+.kmap-panel {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  color: #f8fafc;
+  z-index: 50;
+  overflow: hidden;
+  max-width: 400px;
+}
+
+.panel-header {
+  background: rgba(30, 41, 59, 0.8);
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  color: #e2e8f0;
+}
+
+.panel-body {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.empty-msg {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.kmap-table {
+  border-collapse: collapse;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+.kmap-table th, .kmap-table td {
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  text-align: center;
+  width: 48px;
+  height: 48px;
+}
+
+.kmap-table th {
+  background: rgba(51, 65, 85, 0.5);
+  color: #cbd5e1;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.kmap-table td {
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.kmap-table td.cell-one {
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+}
+
+.kmap-table td.cell-zero {
+  color: #64748b;
+}
+
+/* Diagonal cell hack */
+.diagonal-cell {
+  position: relative;
+  font-size: 0.75rem !important;
+  color: #94a3b8 !important;
+  min-width: 60px;
+}
+
+.diagonal-cell .var-col {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+}
+
+.diagonal-cell .var-row {
+  position: absolute;
+  bottom: 4px;
+  left: 6px;
+}
+
+.diagonal-cell .var-slash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+}
